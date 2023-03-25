@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * print_int - funtion to print integers

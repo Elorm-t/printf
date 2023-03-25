@@ -24,9 +24,10 @@ int handler(const char *format, gettype *str_arr, va_list parg)
 			b++;
 			a = format[b];
 
-			while (str_arr[c].type != NULL &&
-				a != *(str_arr[c].type))
+			while (str_arr[c].type != NULL && a != *(str_arr[c].type))
 				c++;
+			if (str_arr[c].type != NULL)
+				len = len + str_arr[c].f(parg);
 			else
 			{
 				if (a == '\0')
